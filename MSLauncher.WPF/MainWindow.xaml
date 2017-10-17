@@ -1,0 +1,25 @@
+﻿<Window x:Class="MSLauncher.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MSLauncher.WPF"
+        mc:Ignorable="d"
+        Title="Mine Sweeper" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0">
+            <MenuItem Header="游戏(_G)" Padding="12,2">
+                <MenuItem Header="新游戏(_N)" Click="miNewGame_Click"></MenuItem>
+            </MenuItem>
+        </Menu>
+
+        <Viewbox Grid.Row="1">
+            <Grid x:Name="gGame"></Grid>
+        </Viewbox>
+    </Grid>
+</Window>
